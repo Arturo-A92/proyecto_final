@@ -1,0 +1,21 @@
+{% extends 'aplicacion/home.html' %}
+
+{% block titulos %}
+<title> formulario </title>
+{% endblock  %}
+
+{% block cuerpo %}
+
+{% if miFormulario.error %}
+<p style = "color: red;"> estan mal los datos, revisar</p>
+{% endif %}
+<form action="" method="POST">
+{% csrf_token %}
+<div>
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+</div>
+<button type="submit">enviar</button>
+</form>
+{% endblock  %}
