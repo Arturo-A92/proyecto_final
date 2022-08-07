@@ -2,6 +2,6 @@ from django import forms
 
 class formulario(forms.Form):
 
-    curso = forms.CharField(max_length=40)
+    curso = forms.CharField(required = True )
     camada = forms.IntegerField()
 

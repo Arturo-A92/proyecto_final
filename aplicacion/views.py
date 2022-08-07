@@ -29,7 +29,7 @@ def mostrar_index(request):
     return render (request, "aplicacion/index_nuevo.html", {})
     
 def index(request):
-    return render (request, "aplicacion/index.html",{})
+    return render (request, "aplicacion/nuevo.html",{})
 
 def home(request):
     return render (request, "aplicacion/home.html",{})
@@ -49,7 +49,7 @@ def cursoFormulario(request):
 
             informacion = miFormulario.cleaned_data
 
-            curso = Curso (nombre=informacion['nombre'], camada=informacion['camada'])
+            curso = Curso (nombre=informacion['curso'], camada=informacion['camada'])
 
             curso.save()
 
